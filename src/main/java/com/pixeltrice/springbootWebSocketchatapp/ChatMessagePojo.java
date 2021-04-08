@@ -7,14 +7,9 @@ import lombok.Setter;
 @Setter
 public class ChatMessagePojo {
 
-	 private MessageType type;
-	    private String content;
-	    private String sender;
-	    private Integer idProposta;
+  private String username;
+  private String nomeUsuario;
+  private String mensagem;
+  private Integer idProposta;
 
-	    public enum MessageType {
-	        CHAT,
-	        JOIN,
-	        LEAVE
-	    }
-	}
+}

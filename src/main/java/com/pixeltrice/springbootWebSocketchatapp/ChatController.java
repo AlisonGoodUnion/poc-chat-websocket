@@ -20,7 +20,7 @@ public class ChatController {
     public ChatMessagePojo addUser(@Payload ChatMessagePojo chatMessagePojo, 
                                SimpMessageHeaderAccessor headerAccessor) {
         // Add username in web socket session
-        headerAccessor.getSessionAttributes().put("username", chatMessagePojo.getSender());
+        headerAccessor.getSessionAttributes().put("username", chatMessagePojo.getUsername());
         headerAccessor.getSessionAttributes().put("idProposta", chatMessagePojo.getIdProposta());
         return chatMessagePojo;
     }
